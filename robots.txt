@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /css/
+Disallow: /fonts/
+Sitemap: https://whereistherum.com/sitemap.xml

@@ -1,0 +1,165 @@
+/* Styles */
+/* https://whereistherum.com/ */
+
+/** Root **/
+:root {
+	/* Background Colors */
+	--bg-dark: #1f1f1f;
+	--bg-mid: #333333;
+	--bg-light: #f1f1f1;
+	/* Text Colors */
+	--tx-dark: #db72a5;
+	--tx-mid: #efefdc;
+	--tx-light: #f1f1f1;
+	/* Header Height */
+	--hd-height: 80px;
+	/* Heading Sizes */
+	--h1-size: 3.5rem;
+	--h2-size: 3.0rem;
+}
+@media (prefers-color-scheme: light) {
+	:root {
+		/* Background Colors */
+		--bg-mid: #efefdc;
+		--bg-light: #1f1f1f;
+		/* Text Colors */
+		--tx-dark: #9e5c71;
+		--tx-mid: #333333;
+	}
+}
+@media (max-width: 576px) {
+	:root {
+		/* Heading Sizes */
+		--h1-size: 2.5rem;
+		--h2-size: 2.0rem;
+	}
+}
+
+/** Elements **/
+body {
+	background-color: var(--bg-mid);
+	color: var(--tx-mid);
+	font-family: "IMFell", Georgia, serif;
+	font-size: 1.3rem;
+	line-height: 1.5;
+	min-width: 333px;
+}
+h1, h2 {
+	margin: 0;
+}
+h1 {
+	font-size: var(--h1-size);
+}
+h2 {
+	font-size: var(--h2-size);
+}
+a:link, a:visited, a:hover, a:active {
+	color: var(--tx-mid);
+	transition: color 0.6s;
+}
+a:hover {
+	color: var(--tx-dark);
+}
+img {
+	border-style: none;
+}
+
+/** Container **/
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+@meida (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+/** Header **/
+header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: var(--hd-height);
+	background-color: var(--bg-dark);
+	border-bottom: 2px solid var(--bg-light);
+}
+header .logo {
+	height: 100%;
+}
+header .logo a {
+	display: inline-block;
+	white-space: nowrap;
+	text-decoration: none;
+	color: var(--tx-light);
+}
+header .logo img {
+	padding: calc((var(--hd-height) - 60px) / 2) 0;
+	height: 60px;
+	margin: 0 1rem;
+}
+header .logo span {
+	position: relative;
+	bottom: 1.5rem;
+	font-size: 3.0rem;
+}
+@media (max-width: 576px) {
+	header .logo span {
+		bottom: 2.0rem;
+		font-size: 2.0rem;
+	}
+}
+
+/** Main **/
+main {
+	margin-top: var(--hd-height);
+	min-height: calc(100vh - var(--hd-height));
+	text-align: center;
+}
+
+/** Beastie **/
+#beastie {
+	padding: 35px 0;
+	height: calc(100vh - var(--hd-height) - var(--h1-size) - var(--h2-size) - 70px);
+}
+#beastie img {
+	display: block;
+	margin: 0 auto;
+	height: 100%;
+	max-width: 90%;
+	object-fit: contain;
+}
+
+/** Footer **/
+footer {
+	border-top: 2px solid var(--bg-light);
+	width: 75%;
+	margin: 0 auto;
+	padding-top: 6px;
+	text-align: center;
+}
+
+/** Font | IM Fell **/
+@font-face {
+  font-family: "IMFell";
+  src: url("../fonts/IMFell/IMFell-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
